@@ -46,12 +46,12 @@ class CameraViewController: UIViewController {
         myButton.setTitle("撮影", for: .normal)
         myButton.layer.cornerRadius = 20.0
         myButton.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height-50)
-        myButton.addTarget(self, action: #selector(onClickMyButton), for: .touchUpInside)
+        myButton.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         self.view.addSubview(myButton);
     }
     
-    func onClickMyButton(sender: UIButton){
+    func onClick(sender: UIButton){
         let myVideoConnection = myImageOutput.connection(withMediaType: AVMediaTypeVideo)
         
         self.myImageOutput.captureStillImageAsynchronously(from: myVideoConnection, completionHandler: {(imageDataBuffer, error) in

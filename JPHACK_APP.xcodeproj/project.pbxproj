@@ -13,6 +13,9 @@
 		4A04406E1DC43D44007F6C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406D1DC43D44007F6C61 /* Assets.xcassets */; };
 		4A0440711DC43D44007F6C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406F1DC43D44007F6C61 /* LaunchScreen.storyboard */; };
 		4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0440791DC443F9007F6C61 /* AVFoundation.framework */; };
+		4A04407C1DC454FD007F6C61 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A04407B1DC454FD007F6C61 /* Photos.framework */; };
+		4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */; };
+		A568F3B798774F6798525B6D /* libPods-JPHACK_APP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,12 @@
 		4A0440701DC43D44007F6C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A0440721DC43D44007F6C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A0440791DC443F9007F6C61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4A04407B1DC454FD007F6C61 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoUploadViewController.swift; sourceTree = "<group>"; };
+		4A0440921DC48DE1007F6C61 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.debug.xcconfig"; sourceTree = "<group>"; };
+		E7D5097D6676BBE301AD4E29 /* Pods-JPHACK_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.release.xcconfig"; sourceTree = "<group>"; };
+		F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPHACK_APP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A04407C1DC454FD007F6C61 /* Photos.framework in Frameworks */,
 				4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */,
+				A568F3B798774F6798525B6D /* libPods-JPHACK_APP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,7 @@
 				4A0440651DC43D44007F6C61 /* JPHACK_APP */,
 				4A0440641DC43D44007F6C61 /* Products */,
 				4A0440781DC443F9007F6C61 /* Frameworks */,
+				9DBA845DE0B9E599FB8E02A6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +72,8 @@
 			children = (
 				4A0440661DC43D44007F6C61 /* AppDelegate.swift */,
 				4A0440681DC43D44007F6C61 /* CameraViewController.swift */,
+				4A0440921DC48DE1007F6C61 /* Bridging-Header.h */,
+				4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */,
 				4A04406A1DC43D44007F6C61 /* Main.storyboard */,
 				4A04406D1DC43D44007F6C61 /* Assets.xcassets */,
 				4A04406F1DC43D44007F6C61 /* LaunchScreen.storyboard */,
@@ -71,9 +85,20 @@
 		4A0440781DC443F9007F6C61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A04407B1DC454FD007F6C61 /* Photos.framework */,
 				4A0440791DC443F9007F6C61 /* AVFoundation.framework */,
+				F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DBA845DE0B9E599FB8E02A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */,
+				E7D5097D6676BBE301AD4E29 /* Pods-JPHACK_APP.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A0440751DC43D45007F6C61 /* Build configuration list for PBXNativeTarget "JPHACK_APP" */;
 			buildPhases = (
+				1192969A8929A661017B9ED2 /* Check Pods Manifest.lock */,
 				4A04405F1DC43D44007F6C61 /* Sources */,
 				4A0440601DC43D44007F6C61 /* Frameworks */,
 				4A0440611DC43D44007F6C61 /* Resources */,
+				FFA73196D781930E4122E19F /* Embed Pods Frameworks */,
+				A982ABBB77D6E912407AE28F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +172,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1192969A8929A661017B9ED2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A982ABBB77D6E912407AE28F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFA73196D781930E4122E19F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A04405F1DC43D44007F6C61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +227,7 @@
 			files = (
 				4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */,
 				4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */,
+				4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +348,7 @@
 		};
 		4A0440761DC43D45007F6C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64LEQXTB98;
@@ -279,12 +357,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.JPHACK-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/JPHACK_APP/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4A0440771DC43D45007F6C61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D5097D6676BBE301AD4E29 /* Pods-JPHACK_APP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64LEQXTB98;
@@ -293,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.JPHACK-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/JPHACK_APP/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
