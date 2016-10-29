@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0440661DC43D44007F6C61 /* AppDelegate.swift */; };
-		4A0440691DC43D44007F6C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0440681DC43D44007F6C61 /* ViewController.swift */; };
+		4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0440681DC43D44007F6C61 /* CameraViewController.swift */; };
 		4A04406C1DC43D44007F6C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406A1DC43D44007F6C61 /* Main.storyboard */; };
 		4A04406E1DC43D44007F6C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406D1DC43D44007F6C61 /* Assets.xcassets */; };
 		4A0440711DC43D44007F6C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406F1DC43D44007F6C61 /* LaunchScreen.storyboard */; };
+		4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0440791DC443F9007F6C61 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A0440631DC43D44007F6C61 /* JPHACK_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPHACK_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0440661DC43D44007F6C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A0440681DC43D44007F6C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A0440681DC43D44007F6C61 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4A04406B1DC43D44007F6C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A04406D1DC43D44007F6C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A0440701DC43D44007F6C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A0440721DC43D44007F6C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A0440791DC443F9007F6C61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				4A0440651DC43D44007F6C61 /* JPHACK_APP */,
 				4A0440641DC43D44007F6C61 /* Products */,
+				4A0440781DC443F9007F6C61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +59,21 @@
 			isa = PBXGroup;
 			children = (
 				4A0440661DC43D44007F6C61 /* AppDelegate.swift */,
-				4A0440681DC43D44007F6C61 /* ViewController.swift */,
+				4A0440681DC43D44007F6C61 /* CameraViewController.swift */,
 				4A04406A1DC43D44007F6C61 /* Main.storyboard */,
 				4A04406D1DC43D44007F6C61 /* Assets.xcassets */,
 				4A04406F1DC43D44007F6C61 /* LaunchScreen.storyboard */,
 				4A0440721DC43D44007F6C61 /* Info.plist */,
 			);
 			path = JPHACK_APP;
+			sourceTree = "<group>";
+		};
+		4A0440781DC443F9007F6C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A0440791DC443F9007F6C61 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +108,7 @@
 				TargetAttributes = {
 					4A0440621DC43D44007F6C61 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 64LEQXTB98;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0440691DC43D44007F6C61 /* ViewController.swift in Sources */,
+				4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */,
 				4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +273,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64LEQXTB98;
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.JPHACK-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +287,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64LEQXTB98;
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.JPHACK-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +316,7 @@
 				4A0440771DC43D45007F6C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
