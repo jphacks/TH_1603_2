@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 class NewsTableViewController: UITableViewController {
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A484CAB71A60CA016B8A97E /* Pods_JPHACK_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CBA009190E01042709C18 /* Pods_JPHACK_APP.framework */; };
 		4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0440661DC43D44007F6C61 /* AppDelegate.swift */; };
 		4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0440681DC43D44007F6C61 /* CameraViewController.swift */; };
 		4A04406C1DC43D44007F6C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A04406A1DC43D44007F6C61 /* Main.storyboard */; };
@@ -15,8 +16,10 @@
 		4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0440791DC443F9007F6C61 /* AVFoundation.framework */; };
 		4A04407C1DC454FD007F6C61 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A04407B1DC454FD007F6C61 /* Photos.framework */; };
 		4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */; };
+		4A5230D01DC542600039D9F1 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5230CE1DC541670039D9F1 /* APIKit.framework */; };
+		4A5230D21DC567090039D9F1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5230D11DC567090039D9F1 /* News.swift */; };
 		4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4141DC533900018E11C /* NewsTableViewController.swift */; };
-		A568F3B798774F6798525B6D /* libPods-JPHACK_APP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */; };
+		4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4171DC539610018E11C /* NewsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +34,13 @@
 		4A04407B1DC454FD007F6C61 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoUploadViewController.swift; sourceTree = "<group>"; };
 		4A0440921DC48DE1007F6C61 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		4A5230CE1DC541670039D9F1 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		4A5230D11DC567090039D9F1 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4A63A4141DC533900018E11C /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		4A63A4171DC539610018E11C /* NewsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.debug.xcconfig"; sourceTree = "<group>"; };
+		A69CBA009190E01042709C18 /* Pods_JPHACK_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPHACK_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D5097D6676BBE301AD4E29 /* Pods-JPHACK_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.release.xcconfig"; sourceTree = "<group>"; };
-		F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JPHACK_APP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,9 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5230D01DC542600039D9F1 /* APIKit.framework in Frameworks */,
 				4A04407C1DC454FD007F6C61 /* Photos.framework in Frameworks */,
 				4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */,
-				A568F3B798774F6798525B6D /* libPods-JPHACK_APP.a in Frameworks */,
+				2A484CAB71A60CA016B8A97E /* Pods_JPHACK_APP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,7 @@
 		4A0440651DC43D44007F6C61 /* JPHACK_APP */ = {
 			isa = PBXGroup;
 			children = (
+				4A63A4161DC538C80018E11C /* Model */,
 				4A0440921DC48DE1007F6C61 /* Bridging-Header.h */,
 				4A0440661DC43D44007F6C61 /* AppDelegate.swift */,
 				4A63A4141DC533900018E11C /* NewsTableViewController.swift */,
@@ -88,11 +96,21 @@
 		4A0440781DC443F9007F6C61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A5230CE1DC541670039D9F1 /* APIKit.framework */,
 				4A04407B1DC454FD007F6C61 /* Photos.framework */,
 				4A0440791DC443F9007F6C61 /* AVFoundation.framework */,
-				F39391CC34B42A04E94E53CA /* libPods-JPHACK_APP.a */,
+				A69CBA009190E01042709C18 /* Pods_JPHACK_APP.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A63A4161DC538C80018E11C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A63A4171DC539610018E11C /* NewsRequest.swift */,
+				4A5230D11DC567090039D9F1 /* News.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9DBA845DE0B9E599FB8E02A6 /* Pods */ = {
@@ -230,7 +248,9 @@
 			files = (
 				4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */,
 				4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */,
+				4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */,
 				4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */,
+				4A5230D21DC567090039D9F1 /* News.swift in Sources */,
 				4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +376,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64LEQXTB98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -372,6 +396,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64LEQXTB98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
