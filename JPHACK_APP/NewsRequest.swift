@@ -9,8 +9,12 @@
 import APIKit
 import Himotoki
 
-struct NewsRequest {
-    typealias Response = News
+struct NewsRequest: NewsRequestType {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Array<News> {
+        return try decodeArray(object)
+    }
+
+    typealias Response = [News]
     
     var baseURL: URL {
         return URL(string: "http://cu76nat-aj3-app000.c4sa.net")!
@@ -24,9 +28,9 @@ struct NewsRequest {
         return "/users/read"
     }
     
-    func responseFromObject(object: AnyObject, URLResponse: HTTPURLResponse) throws -> Response {
-        return try decodeValue(object)
-    }
+//    func responseFromObject(object: AnyObject, URLResponse: HTTPURLResponse) throws -> Response {
+//        return try decodeArray(object)
+//    }
 }
 
 

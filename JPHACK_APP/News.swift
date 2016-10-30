@@ -12,7 +12,7 @@ import Himotoki
 struct News {
     let title: String
     let urlString: String
-    let imageURL: NSURL
+//    let imageURL: NSURL
 }
 
 extension News: Decodable {
@@ -25,7 +25,6 @@ extension News: Decodable {
     
     static func decode(_ e: Extractor) throws -> News {
         return try News(title: e <| "title",
-                        urlString: e <| "url",
-                        imageURL: URLTransformer.apply(e <| "image"))
+                        urlString: e <| "url")
     }
 }

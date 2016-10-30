@@ -18,6 +18,11 @@
 		4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */; };
 		4A5230D01DC542600039D9F1 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5230CE1DC541670039D9F1 /* APIKit.framework */; };
 		4A5230D21DC567090039D9F1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5230D11DC567090039D9F1 /* News.swift */; };
+		4A5230D51DC57E2A0039D9F1 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5230D41DC57E2A0039D9F1 /* NewsCell.swift */; };
+		4A5230DA1DC58A470039D9F1 /* NewsRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5230D91DC58A470039D9F1 /* NewsRequestType.swift */; };
+		4A5230DC1DC58CE20039D9F1 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5230DB1DC58CE20039D9F1 /* WebImage.framework */; };
+		4A5230DE1DC58CF30039D9F1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5230DD1DC58CF30039D9F1 /* Result.framework */; };
+		4A5230E01DC58DA30039D9F1 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5230DF1DC58DA30039D9F1 /* Himotoki.framework */; };
 		4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4141DC533900018E11C /* NewsTableViewController.swift */; };
 		4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4171DC539610018E11C /* NewsRequest.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +41,12 @@
 		4A0440921DC48DE1007F6C61 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4A5230CE1DC541670039D9F1 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		4A5230D11DC567090039D9F1 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4A5230D41DC57E2A0039D9F1 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		4A5230D61DC5844A0039D9F1 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage.framework"; sourceTree = "<group>"; };
+		4A5230D91DC58A470039D9F1 /* NewsRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequestType.swift; sourceTree = "<group>"; };
+		4A5230DB1DC58CE20039D9F1 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		4A5230DD1DC58CF30039D9F1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		4A5230DF1DC58DA30039D9F1 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		4A63A4141DC533900018E11C /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		4A63A4171DC539610018E11C /* NewsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5230E01DC58DA30039D9F1 /* Himotoki.framework in Frameworks */,
+				4A5230DE1DC58CF30039D9F1 /* Result.framework in Frameworks */,
+				4A5230DC1DC58CE20039D9F1 /* WebImage.framework in Frameworks */,
 				4A5230D01DC542600039D9F1 /* APIKit.framework in Frameworks */,
 				4A04407C1DC454FD007F6C61 /* Photos.framework in Frameworks */,
 				4A04407A1DC443F9007F6C61 /* AVFoundation.framework in Frameworks */,
@@ -79,12 +93,11 @@
 		4A0440651DC43D44007F6C61 /* JPHACK_APP */ = {
 			isa = PBXGroup;
 			children = (
+				4A5230D81DC586E00039D9F1 /* ViewController */,
+				4A5230D31DC57DFB0039D9F1 /* View */,
 				4A63A4161DC538C80018E11C /* Model */,
 				4A0440921DC48DE1007F6C61 /* Bridging-Header.h */,
 				4A0440661DC43D44007F6C61 /* AppDelegate.swift */,
-				4A63A4141DC533900018E11C /* NewsTableViewController.swift */,
-				4A0440681DC43D44007F6C61 /* CameraViewController.swift */,
-				4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */,
 				4A04406A1DC43D44007F6C61 /* Main.storyboard */,
 				4A04406D1DC43D44007F6C61 /* Assets.xcassets */,
 				4A04406F1DC43D44007F6C61 /* LaunchScreen.storyboard */,
@@ -96,6 +109,10 @@
 		4A0440781DC443F9007F6C61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A5230DF1DC58DA30039D9F1 /* Himotoki.framework */,
+				4A5230DD1DC58CF30039D9F1 /* Result.framework */,
+				4A5230DB1DC58CE20039D9F1 /* WebImage.framework */,
+				4A5230D61DC5844A0039D9F1 /* SDWebImage.framework */,
 				4A5230CE1DC541670039D9F1 /* APIKit.framework */,
 				4A04407B1DC454FD007F6C61 /* Photos.framework */,
 				4A0440791DC443F9007F6C61 /* AVFoundation.framework */,
@@ -104,11 +121,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A5230D31DC57DFB0039D9F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A5230D41DC57E2A0039D9F1 /* NewsCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4A5230D81DC586E00039D9F1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A63A4141DC533900018E11C /* NewsTableViewController.swift */,
+				4A0440681DC43D44007F6C61 /* CameraViewController.swift */,
+				4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		4A63A4161DC538C80018E11C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4A63A4171DC539610018E11C /* NewsRequest.swift */,
 				4A5230D11DC567090039D9F1 /* News.swift */,
+				4A5230D91DC58A470039D9F1 /* NewsRequestType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,14 +251,17 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/build/iOS/WebImage.framework",
 			);
 			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		FFA73196D781930E4122E19F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -246,9 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5230DA1DC58A470039D9F1 /* NewsRequestType.swift in Sources */,
 				4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */,
 				4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */,
 				4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */,
+				4A5230D51DC57E2A0039D9F1 /* NewsCell.swift in Sources */,
 				4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */,
 				4A5230D21DC567090039D9F1 /* News.swift in Sources */,
 				4A0440801DC4559C007F6C61 /* PhotoUploadViewController.swift in Sources */,
@@ -379,6 +420,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -399,6 +441,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = JPHACK_APP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

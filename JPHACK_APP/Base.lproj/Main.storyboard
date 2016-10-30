@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L63-W2-hqG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lud-CB-1y3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -75,18 +75,43 @@
         <scene sceneID="FEc-xZ-OHZ">
             <objects>
                 <tableViewController id="WGe-LM-ffl" customClass="NewsTableViewController" customModule="JPHACK_APP" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NI0-4T-QpR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="NI0-4T-QpR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yS8-Uh-ajN">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="yS8-Uh-ajN" customClass="NewsCell" customModule="JPHACK_APP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yS8-Uh-ajN" id="Lbv-Rf-7Lk">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sJ-Dz-RxC">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="uZz-t0-7aq"/>
+                                                <constraint firstAttribute="height" constant="64" id="ute-j8-UJZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-b4-gt6">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1sJ-Dz-RxC" firstAttribute="top" secondItem="Lbv-Rf-7Lk" secondAttribute="top" constant="8" id="1hk-P2-IJn"/>
+                                        <constraint firstItem="1sJ-Dz-RxC" firstAttribute="leading" secondItem="Lbv-Rf-7Lk" secondAttribute="leading" constant="8" id="Grm-yC-Oqe"/>
+                                        <constraint firstItem="aYE-b4-gt6" firstAttribute="leading" secondItem="1sJ-Dz-RxC" secondAttribute="trailing" constant="8" id="frv-Uo-dae"/>
+                                        <constraint firstItem="aYE-b4-gt6" firstAttribute="trailing" secondItem="Lbv-Rf-7Lk" secondAttribute="trailingMargin" id="nhx-Jd-Rc0"/>
+                                        <constraint firstItem="aYE-b4-gt6" firstAttribute="top" secondItem="Lbv-Rf-7Lk" secondAttribute="topMargin" constant="8" id="qpR-2H-eYQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="1sJ-Dz-RxC" secondAttribute="bottom" constant="8" id="vvA-Cb-ipy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="thumbnailImageView" destination="1sJ-Dz-RxC" id="8tu-hW-QRj"/>
+                                    <outlet property="titleLabel" destination="aYE-b4-gt6" id="54c-VH-gUy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -98,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgv-4n-hbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="1734"/>
+            <point key="canvasLocation" x="-79.200000000000003" y="1733.8830584707648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="18R-pC-l34">
