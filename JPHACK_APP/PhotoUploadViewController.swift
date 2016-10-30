@@ -100,14 +100,11 @@ class PhotoUploadViewController: UIViewController, UIImagePickerControllerDelega
             print("******* response = \(response)")
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print("****** response data = \(responseString!)")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                print("complete")
-                SVProgressHUD.showSuccess(withStatus: "アップロード完了")
-            }
+//            SVProgressHUD.showSuccess(withStatus: "アップロード完了")
         }
         task.resume()
     }
-    
+        
     @IBAction func onButtonImageUpload(_ sender: AnyObject) {
         if((self.image) != nil) {
             self.myImageUploadRequest()

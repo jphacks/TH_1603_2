@@ -18,6 +18,7 @@ class NewsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//        SVProgressHUD.dismiss()
         
         let request = NewsRequest()
         Session.send(request) { result in
@@ -101,6 +102,7 @@ class NewsTableViewController: UITableViewController {
                 print(NSString(data: json as Data, encoding: String.Encoding.utf8.rawValue)!)
                 
             } catch {
+                print("*****error*****")
                 print(error)
             }
             
@@ -119,10 +121,15 @@ class NewsTableViewController: UITableViewController {
         
         // jsonデータのセット.
         request.httpBody = data.data(using: String.Encoding.utf8.rawValue)
+        print("*****request*****")
+        print(request)
+
         
         let task:URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: { (_data, response, err) -> Void in
             print("*****response*****")
             print(response)
+            print("*****error*****")
+            print(err)
         })
         
         task.resume()
