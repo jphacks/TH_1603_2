@@ -14,7 +14,7 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     func update(withItem news: News) {
-//        thumbnailImageView.sd_setImage(with: news.imageURL as URL!)
+        thumbnailImageView.sd_setImage(with: news.imageURL as URL!)
         titleLabel.text = news.title
     }
 }
