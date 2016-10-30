@@ -57,52 +57,83 @@ class NewsTableViewController: UITableViewController {
         
         return cell
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func postData(url: String) {
+//        let urlString = "http://cu76nat-aj3-app000.c4sa.net/users/news"
+//        var request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
+//        
+//        request.httpMethod = "POST"
+//        request.addValue("text/plain", forHTTPHeaderField: "Content-Type")
+//        
+//        let str: String = "data=" + url
+//        let myData: NSData = str.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))! as NSData
+//        request.httpBody = myData as Data
+//        
+//        print("*****request*****")
+//        print(request)
+//        print("*****request*****")
+//        
+//        // use NSURLSessionDataTask
+//        var task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
+//            if (error == nil) {
+//                var result = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
+//                print("*****result*****")
+//                print(result)
+//            } else {
+//                print("*****error*****")
+//                print(error)
+//            }
+//        })
+//        task.resume()
+        
+        
+        var json: NSData!
+        
+        // dictionaryで送信するJSONデータを生成.
+        let myDict:NSMutableDictionary = NSMutableDictionary()
+        myDict.setObject(url, forKey: "url" as NSCopying)
+        // 作成したdictionaryがJSONに変換可能かチェック.
+        if JSONSerialization.isValidJSONObject(myDict){
+            do {
+                // DictionaryからJSON(NSData)へ変換.
+                json = try JSONSerialization.data(withJSONObject: myDict, options: JSONSerialization.WritingOptions.prettyPrinted) as NSData!
+                // 生成したJSONデータの確認.
+                print(NSString(data: json as Data, encoding: String.Encoding.utf8.rawValue)!)
+                
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        // Http通信のリクエスト生成.
+        let config:URLSessionConfiguration = URLSessionConfiguration.default
+        let url:NSURL = NSURL(string: "http://cu76nat-aj3-app000.c4sa.net/users/news")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
+        let session:URLSession = URLSession(configuration: config)
+        
+        request.httpMethod = "POST"
+        
+        // jsonのデータを一度文字列にして、キーと合わせる.
+        let data:NSString = "json=\(NSString(data: json as Data, encoding: String.Encoding.utf8.rawValue)!)" as NSString
+        
+        // jsonデータのセット.
+        request.httpBody = data.data(using: String.Encoding.utf8.rawValue)
+        
+        let task:URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: { (_data, response, err) -> Void in
+            print("*****response*****")
+            print(response)
+        })
+        
+        task.resume()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = self.news[indexPath.row].urlString
+        print("*****title*****")
+        print(self.news[indexPath.row].title)
+        postData(url: url)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
