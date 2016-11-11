@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '177DF14826F5C76FBFEE8A0E'
+               BlueprintIdentifier = 'AD746E163C0278D6E88C9225'
                BlueprintName = 'Pods-JPHACK_APP'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_JPHACK_APP.framework'>

@@ -5,5 +5,7 @@ use_frameworks!
 
 target 'JPHACK_APP' do
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'GoogleAPIClient/Calendar', '~> 1.0.2'
+  pod 'GTMOAuth2', '~> 1.1.0'
 end
 

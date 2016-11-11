@@ -39,6 +39,9 @@
 		4A5230FD1DC5BBB60039D9F1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A5230FC1DC5BBB60039D9F1 /* icon.png */; };
 		4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4141DC533900018E11C /* NewsTableViewController.swift */; };
 		4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A63A4171DC539610018E11C /* NewsRequest.swift */; };
+		4AC2491E1DD2E7C80071C3D5 /* test02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC2491D1DD2E7C80071C3D5 /* test02.png */; };
+		4AC249201DD2EA840071C3D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2491F1DD2EA840071C3D5 /* ViewController.swift */; };
+		4AC249221DD2EB750071C3D5 /* test03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC249211DD2EB750071C3D5 /* test03.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		4A5230FC1DC5BBB60039D9F1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4A63A4141DC533900018E11C /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		4A63A4171DC539610018E11C /* NewsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
+		4AC2491D1DD2E7C80071C3D5 /* test02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test02.png; sourceTree = "<group>"; };
+		4AC2491F1DD2EA840071C3D5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AC249211DD2EB750071C3D5 /* test03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test03.png; sourceTree = "<group>"; };
 		51EC8435E9E8934DCF22EEB8 /* Pods-JPHACK_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.debug.xcconfig"; sourceTree = "<group>"; };
 		A69CBA009190E01042709C18 /* Pods_JPHACK_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPHACK_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D5097D6676BBE301AD4E29 /* Pods-JPHACK_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPHACK_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 				4A63A4141DC533900018E11C /* NewsTableViewController.swift */,
 				4A0440681DC43D44007F6C61 /* CameraViewController.swift */,
 				4A04407F1DC4559C007F6C61 /* PhotoUploadViewController.swift */,
+				4AC2491F1DD2EA840071C3D5 /* ViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 		4A5230E31DC5A4880039D9F1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4AC2491D1DD2E7C80071C3D5 /* test02.png */,
 				4A5230FC1DC5BBB60039D9F1 /* icon.png */,
 				4A5230FA1DC5AC460039D9F1 /* btn_openlibrary.jpg */,
 				4A5230E11DC5A0540039D9F1 /* noimage.jpg */,
@@ -184,6 +192,7 @@
 				4A5230EB1DC5A4880039D9F1 /* deco_03.png */,
 				4A5230EC1DC5A4880039D9F1 /* jphacks.prproj */,
 				4A5230ED1DC5A4880039D9F1 /* logo_02.png */,
+				4AC249211DD2EB750071C3D5 /* test03.png */,
 				4A5230EE1DC5A4880039D9F1 /* logo_03.png */,
 			);
 			path = images;
@@ -271,9 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC249221DD2EB750071C3D5 /* test03.png in Resources */,
 				4A5230F31DC5A4880039D9F1 /* btn_save.png in Resources */,
 				4A5230F41DC5A4880039D9F1 /* deco_01.png in Resources */,
 				4A5230F51DC5A4880039D9F1 /* deco_02.png in Resources */,
+				4AC2491E1DD2E7C80071C3D5 /* test02.png in Resources */,
 				4A5230F91DC5A4880039D9F1 /* logo_03.png in Resources */,
 				4A5230F61DC5A4880039D9F1 /* deco_03.png in Resources */,
 				4A0440711DC43D44007F6C61 /* LaunchScreen.storyboard in Resources */,
@@ -325,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JPHACK_APP/Pods-JPHACK_APP-resources.sh\"\n";
 		};
 		FFA73196D781930E4122E19F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -352,6 +363,7 @@
 				4A5230DA1DC58A470039D9F1 /* NewsRequestType.swift in Sources */,
 				4A63A4151DC533900018E11C /* NewsTableViewController.swift in Sources */,
 				4A0440691DC43D44007F6C61 /* CameraViewController.swift in Sources */,
+				4AC249201DD2EA840071C3D5 /* ViewController.swift in Sources */,
 				4A63A4181DC539610018E11C /* NewsRequest.swift in Sources */,
 				4A5230D51DC57E2A0039D9F1 /* NewsCell.swift in Sources */,
 				4A0440671DC43D44007F6C61 /* AppDelegate.swift in Sources */,

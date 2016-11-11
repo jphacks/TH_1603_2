@@ -84,8 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-JPHACK_APP/GTMOAuth2.framework"
+  install_framework "Pods-JPHACK_APP/GTMSessionFetcher.framework"
+  install_framework "Pods-JPHACK_APP/GoogleAPIClient.framework"
   install_framework "Pods-JPHACK_APP/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-JPHACK_APP/GTMOAuth2.framework"
+  install_framework "Pods-JPHACK_APP/GTMSessionFetcher.framework"
+  install_framework "Pods-JPHACK_APP/GoogleAPIClient.framework"
   install_framework "Pods-JPHACK_APP/SVProgressHUD.framework"
 fi

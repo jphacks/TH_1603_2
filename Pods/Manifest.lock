@@ -1,7 +1,21 @@
 PODS:
+  - GoogleAPIClient/Calendar (1.0.5):
+    - GoogleAPIClient/Core
+    - GTMSessionFetcher (~> 1.1)
+  - GoogleAPIClient/Core (1.0.5):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMOAuth2 (1.1.4):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.7):
+    - GTMSessionFetcher/Full (= 1.1.7)
+  - GTMSessionFetcher/Core (1.1.7)
+  - GTMSessionFetcher/Full (1.1.7):
+    - GTMSessionFetcher/Core (= 1.1.7)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - GoogleAPIClient/Calendar (~> 1.0.2)
+  - GTMOAuth2 (~> 1.1.0)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
 
 EXTERNAL SOURCES:
@@ -14,6 +28,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
+  GoogleAPIClient: 4a6b0b807de8b1115a2835180b25dd93dc60f1ea
+  GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
+  GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
 COCOAPODS: 0.39.0
