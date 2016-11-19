@@ -12,6 +12,6 @@ protocol NewsRequestType: Request {}
 
 extension NewsRequestType {
     var baseURL: URL {
-        return URL(string: "http://cu76nat-aj3-app000.c4sa.net")!
+        return URL(string: "https://version1.xyz/emmer")!
     }
 }

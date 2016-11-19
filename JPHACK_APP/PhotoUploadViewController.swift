@@ -16,7 +16,7 @@ extension NSMutableData {
     }
 }
 
-class PhotoUploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoUploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {    
     @IBOutlet weak var myImageView: UIImageView!
     var image: UIImage!
     

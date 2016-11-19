@@ -8,6 +8,7 @@
 
 import UIKit
 import APIKit
+import SVProgressHUD
 
 class NewsTableViewController: UITableViewController {
     var news: [News] = [] {
@@ -18,7 +19,6 @@ class NewsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        SVProgressHUD.dismiss()
         
         let request = NewsRequest()
         Session.send(request) { result in
@@ -35,13 +35,6 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -140,6 +133,8 @@ class NewsTableViewController: UITableViewController {
         print("*****title*****")
         print(self.news[indexPath.row].title)
         postData(url: url)
+        
+        SVProgressHUD.showSuccess(withStatus: "完了")
     }
     
     override func didReceiveMemoryWarning() {
